@@ -1,0 +1,27 @@
+/* 主div */
+#main_div{
+	width: 300px;
+    height: 150px;
+	background: white;
+}
+/* 提示 */
+#tip{
+	padding-top: 10px;
+    padding-left: 85px;
+}
+
+/* 时间输入框 */
+#time{
+	width: 150px;
+	height: 20px;
+	margin-left: 75px;
+}
+/* 按钮 */
+#msButton{
+	cursor: pointer;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    line-height: 30px;
+	margin-left: 100px;
+}

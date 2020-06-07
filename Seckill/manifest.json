@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "Seckill",
+	"version": "1.0.0",
+	"description": "秒杀脚本",
+	"content_scripts":
+	[
+		{
+			"matches": ["*://item.taobao.com/*","*://detail.tmall.com/*"],
+			"js": ["js/buy.js"]
+		},
+		{
+			"matches": ["*://buy.taobao.com/*","*://buy.tmall.com/*"],
+			"js": ["js/submit_order.js"]
+		}
+	],
+	"browser_action": 
+	{
+		"default_icon": "img/miao.png",
+		"default_title": "秒杀插件",
+		"default_popup": "html/popup.html"
+	},
+	"background":
+	{
+		"scripts": ["js/background.js"]
+	}
+}
