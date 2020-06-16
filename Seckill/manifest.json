@@ -6,7 +6,7 @@
 	"content_scripts":
 	[
 		{
-			"matches": ["*://item.taobao.com/*","*://detail.tmall.com/*"],
+			"matches": ["*://cart.taobao.com/*","*://detail.tmall.com/*"],
 			"js": ["js/buy.js"]
 		},
 		{

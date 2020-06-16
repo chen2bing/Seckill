@@ -15,14 +15,7 @@ chrome.runtime.sendMessage({greeting: 'is_true'}, function(response) {
 		if(target_time <= current_time){
 			return;
 		}
-		//获取购买按钮
-		var buy_button = document.getElementsByClassName('J_LinkBuy');
-		if(buy_button.length == 0){
-			buy_button = document.getElementById('J_LinkBuy');
-		}
-		else{
-			buy_button = document.getElementsByClassName('J_LinkBuy')[0];
-		}
+		
 		//每5s检查一次
 		check_time();
 		var check_time_per_period = setInterval(function(){ check_time() }, 5000);
@@ -30,6 +23,8 @@ chrome.runtime.sendMessage({greeting: 'is_true'}, function(response) {
 		function check_time(){
 			current_time = new Date();
 			var time_dif = parseInt((target_time - current_time) / 1000);
+			//获取购买按钮
+			var buy_button = document.getElementById('J_Go');
 			//如果时间小于5s，开始准备秒杀
 			if(time_dif <= 5){
 				//关闭定期检查
